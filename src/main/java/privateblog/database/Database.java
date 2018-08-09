@@ -16,4 +16,6 @@ public interface Database {
     void updatePost(BlogPost blogPost);
 
     List<BlogPost> getAllPosts();
+
+    BlogPost getSelectedPost(Long id);
 }

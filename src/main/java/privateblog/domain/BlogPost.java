@@ -1,13 +1,12 @@
 package privateblog.domain;
 
 import javax.persistence.*;
-import java.util.Date;
-
+import java.time.LocalDate;
 @Entity
 @Table(name = "PrivateBlog")
 public class BlogPost {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "Id", nullable = false)
     private Long id;
 
@@ -16,19 +15,13 @@ public class BlogPost {
 
     @Temporal(TemporalType.DATE)
     @Column(name = "Posting_Date", nullable = false)
-    private Date postDate;
+    private LocalDate postDate;
 
-    public BlogPost(Long id, String postText, Date postDate){
-        this.id = id;
-        this.postText = postText;
-
-        this.postDate = postDate;
-    }
-    public Date getPostDate() {
+    public LocalDate getPostDate() {
         return postDate;
     }
 
-    public void setPostDate(Date postDate) {
+    public void setPostDate(LocalDate postDate) {
         this.postDate = postDate;
     }
 

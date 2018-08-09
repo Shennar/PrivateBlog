@@ -13,56 +13,59 @@ import java.util.List;
 @Controller
 public class BlogController {
 
-            private static List<BlogPost> persons = new ArrayList<BlogPost>();
+    private static List<BlogPost> persons = new ArrayList<BlogPost>();
     @Value("${welcome.message}")
-        private String message;
+    private String message;
 
-        @Value("${error.message}")
-        private String errorMessage;
+    @Value("${error.message}")
+    private String errorMessage;
 
-    @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
-        public String index(Model model) {
+    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
+    public String index(Model model) {
 
-            model.addAttribute("message", message);
+        model.addAttribute("message", message);
 
-            return "index";
-        }
-
-        @RequestMapping(value = { "/personList" }, method = RequestMethod.GET)
-        public String personList(Model model) {
-
-            model.addAttribute("persons", persons);
-
-            return "personList";
-        }
-
-/*        @RequestMapping(value = { "/addPerson" }, method = RequestMethod.GET)
-        public String showAddPersonPage(Model model) {
-
-            PersonForm personForm = new PersonForm();
-            model.addAttribute("personForm", personForm);
-
-            return "addPerson";
-        }
-
-        @RequestMapping(value = { "/addPerson" }, method = RequestMethod.POST)
-        public String savePerson(Model model, //
-                                 @ModelAttribute("personForm") PersonForm personForm) {
-
-            String firstName = personForm.getFirstName();
-            String lastName = personForm.getLastName();
-
-            if (firstName != null && firstName.length() > 0 //
-                    && lastName != null && lastName.length() > 0) {
-                BlogPost newPerson = new BlogPost(id, blogText, Date.valueOf(LocalDate.now()));
-                persons.add(newPerson);
-
-                return "redirect:/personList";
-            }
-
-            model.addAttribute("errorMessage", errorMessage);
-            return "addPerson";
-        }
-*/
+        return "index";
     }
+
+    @RequestMapping(value = {"/addNewPost"}, method = RequestMethod.GET)
+    public String addNewPost(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
+    }
+
+    @RequestMapping(value = {"/deletePost"}, method = RequestMethod.GET)
+    public String deletePost(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
+    }
+
+    @RequestMapping(value = {"/selectPost"}, method = RequestMethod.GET)
+    public String selectPost(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
+    }
+
+    @RequestMapping(value = {"/updatePost"}, method = RequestMethod.GET)
+    public String updatePost(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
+    }
+
+    @RequestMapping(value = {"/sortPostByDate"}, method = RequestMethod.GET)
+    public String sortPostByDate(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
+    }
+}
 
