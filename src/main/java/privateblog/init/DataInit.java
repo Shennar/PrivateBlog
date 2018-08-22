@@ -20,12 +20,16 @@ public class DataInit implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception{
 		long count = blogPostDAO.count();
 		if (count==0){
-			BlogPost bp = new BlogPost();
 			for (int i=0;i<5;i++){
-				bp.setPostDate(LocalDate.of(2018,i+1,2*i+1));
-				bp.setPostText("This is the post #"+i+"!");
+				BlogPost bp = new BlogPost();
+				bp.setPostDate(LocalDate.of(2018,2*i+1,3*i+1));
+				bp.setPostText("This is the post #"+(i+1)+"!");
 				blogPostDAO.save(bp);
 			}
+			BlogPost bp = new BlogPost();
+			bp.setPostDate(LocalDate.now());
+			bp.setPostText("This is the post #"+6+"!");
+			blogPostDAO.save(bp);
 		}
 	}
 }

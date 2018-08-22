@@ -8,22 +8,19 @@
    <body>
       <h2>Add new post:</h2>
       <form th:action="@{/addNewPost}"
-         th:object="${personForm}" method="POST">
+         th:object="${blogPostForm}" method="POST">
          Post text (maximum 960 signs):
-		 </br>
-		 <!--
-         <input type="text" th:field="*{postText}" />   
-			-->
-		<textarea autofocus name="postText" maxlength="960" cols ="80" rows="12">
-		</textarea>
+		 <br/>
+
+         <input type="text" th:field="*{postText}" maxlength="960" autofocus required/>
+
+         <!--
+   		 <textarea name="postText" th:field="*{postText}" maxlength="960" cols ="80" rows="12" autofocus required></textarea>
+         -->
          <br/>
-         <input type="submit" value="Add post" />
+         <input type="submit" value="Add post"/>
       </form>
       <br/>
-      <div th:if="${errorMessage}" th:utext="${errorMessage}"
-         style="color:red;font-style:italic;">
-         ...
-      </div>
-     	  <a href="index">Home</a>
+      <a href="index">Home</a>
    </body>
 </html>

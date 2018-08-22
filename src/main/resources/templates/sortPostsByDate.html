@@ -17,7 +17,7 @@
             </tr>
             <tr th:each ="post : ${blogPosts}">
                <td th:utext="${post.postDate}">...</td>
-               <td th:utext="${person.postText}">...</td>
+               <td th:utext="${post.postText}">...</td>
             </tr>
          </table>
       </div>

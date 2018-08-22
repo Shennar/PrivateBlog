@@ -16,15 +16,16 @@
                <th>Post text</th>
 			   <th>Action</th>
             </tr>
-            <tr th:each ="post : ${blogPosts}">
+            <tr th:each ="post : ${allBlogPosts}">
                <td th:utext="${post.postDate}">...</td>
-               <td th:utext="${person.postText}">...</td>
+               <td th:utext="${post.postText}">...</td>
 			   <td>
-			   <form th:action = "@{/selectPost}"
-			   th:object = "${/selectPost}" method = "get">
-			   <input type="hidden" th:field="${id}">
-			   <button type="submit">Select</button>
+               <form th:action = "@{/selectPost}"
+			   th:object = "{/post}" method = "GET">
+               <input type="hidden" th:field="${id}">
+               <button type="submit">Select</button>
 			   </form>
+			   </td>
             </tr>
          </table>
       </div>
