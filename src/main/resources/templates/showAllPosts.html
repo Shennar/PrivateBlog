@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
    <head>
       <meta charset="UTF-8" />
-      <title>Show sorted posts</title>
+      <title>Show all posts</title>
       <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
    </head>
    <body>
-      <h2>Posts sorted by date:</h2>
+      <h2>All posts in blog:</h2>
       
       <br/><br/>
       <div>
@@ -14,10 +14,17 @@
             <tr>
                <th>Date</th>
                <th>Post text</th>
+			   <th>Action</th>
             </tr>
             <tr th:each ="post : ${blogPosts}">
                <td th:utext="${post.postDate}">...</td>
                <td th:utext="${person.postText}">...</td>
+			   <td>
+			   <form th:action = "@{/selectPost}"
+			   th:object = "${/selectPost}" method = "get">
+			   <input type="hidden" th:field="${id}">
+			   <button type="submit">Select</button>
+			   </form>
             </tr>
          </table>
       </div>

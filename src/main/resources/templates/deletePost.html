@@ -1,26 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Delete post</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-</head>
-<body>
-<h1>Delete post</h1>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Post deleted</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+	<h2> Post deleted</h2>
+    <a href="index">Home</a>
 
-<br/><br/>
-<div>
-    <table border="1">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-        <tr th:each ="person : ${persons}">
-            <td th:utext="${person.firstName}">...</td>
-            <td th:utext="${person.lastName}">...</td>
-        </tr>
-    </table>
-</div>
-<a href="index">Start page</a>
-</body>
+   </body>
+    
 </html>

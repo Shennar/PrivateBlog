@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Selected post</title>
+   </head>
+   <body>
+      <h2>Selected post:</h2>
+      <br/>
+      <h3>Date: </h3>
+      <h3 th:utext="${post.postDate}">...</h3>
+      <h3>Post: </h3>
+      <h3 th:utext="${person.postText}">...</h3>
+      <br/>
+      <form th:action = "@{/deletePost}"
+	 	   th:object = "${/selectPost}" method = "post">
+          <input type="hidden" th:field="${id}">
+          <button type="submit">Delete</button>
+      </form>
+      <form th:action = "@{/updatePost}"
+			   th:object = "${/selectPost}" method = "post">
+			   <input type="hidden" th:field="${id}">
+			   <button type="submit">Update</button>
+      </form>
+      <a href="index">Home</a>
+   </body>
+</html>

@@ -1,20 +1,19 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Private Blog</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-</head>
-<body>
-<h1>Private Blog</h1>
-<h2 th:utext="${message}">..!..</h2>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Private Blog</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+	<h2> Private Blog</h2>
+      <h3>Available actions:</h3>
+      <a th:href="@{/showAllPosts}">1. Show all posts</a>  
+	  </br>
+      <a th:href="@{/addPost}">2. Add new post</a>  
+	  </br>
+      <a th:href="@{/sortPostsByDate}">3. Sort posts by date</a>  
 
-<a th:href="@{/addNewPost}">Add new post</a>
-<a th:href="@{/deletePost}">Delete post</a>
-<a th:href="@{/updatePost}">Update post</a>
-<a th:href="@{/selectPost}">Select post</a>
-<a th:href="@{/sortPostsByDate}">Sort posts by date</a>
-
-</body>
-
+   </body>
+    
 </html>
