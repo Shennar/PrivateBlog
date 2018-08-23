@@ -41,7 +41,7 @@ public class PrivateBlogController{
 		return "addPost";
 	}
 	@RequestMapping(value={"/addPost"}, method = RequestMethod.POST)
-	public String addNewPost(Model model, @ModelAttribute("blogPostForm")
+	public String addNewPost(@ModelAttribute("blogPostForm")
 	BlogPostForm blogPostForm){
 		String postText = blogPostForm.getPostText();
 			BlogPost bp = new BlogPost();

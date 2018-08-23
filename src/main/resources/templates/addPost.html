@@ -7,16 +7,11 @@
    </head>
    <body>
       <h2>Add new post:</h2>
-      <form th:action="@{/addNewPost}"
+      <form th:action="@{/addPost}"
          th:object="${blogPostForm}" method="POST">
          Post text (maximum 960 signs):
 		 <br/>
-
-         <input type="text" th:field="*{postText}" maxlength="960" autofocus required/>
-
-         <!--
-   		 <textarea name="postText" th:field="*{postText}" maxlength="960" cols ="80" rows="12" autofocus required></textarea>
-         -->
+         <textarea name="postText" th:field="*{postText}" maxlength="960" cols ="80" rows="12" autofocus required></textarea>
          <br/>
          <input type="submit" value="Add post"/>
       </form>

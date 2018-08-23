@@ -20,11 +20,11 @@
                <td th:utext="${post.postDate}">...</td>
                <td th:utext="${post.postText}">...</td>
 			   <td>
-               <form th:action = "@{/selectPost}"
-			   th:object = "{/post}" method = "GET">
-               <input type="hidden" th:field="${id}">
-               <button type="submit">Select</button>
-			   </form>
+                <form th:action = "@{/selectedPost}"
+			    th:object = "${blogPost}" method = "POST">
+                <input type="hidden" th:field="${blogPost.id}" />
+                <button type="submit">Select</button>
+			    </form>
 			   </td>
             </tr>
          </table>
