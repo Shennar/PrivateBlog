@@ -14,21 +14,21 @@
             <tr>
                <th>Date</th>
                <th>Post text</th>
-			   <th>Action</th>
+               <th>Action</th>
             </tr>
             <tr th:each ="post : ${allBlogPosts}">
-               <td th:utext="${post.postDate}">...</td>
-               <td th:utext="${post.postText}">...</td>
-			   <td>
+                <td th:utext="${post.postDate}">...</td>
+                <td th:utext="${post.postText}">...</td>
+                <td>
                 <form th:action = "@{/selectedPost}"
-			    th:object = "${blogPost}" method = "POST">
-                <input type="hidden" th:field="${blogPost.id}" />
+                    th:object="${post}" method = "POST">
+                <!--    <input type="hidden" th:field="${id}" /> -->
                 <button type="submit">Select</button>
-			    </form>
-			   </td>
+                </form>
+                </td>
             </tr>
          </table>
       </div>
-	  <a href="index">Home</a>
+      <a href="index">Home</a>
    </body>
 </html>

@@ -6,21 +6,21 @@
       <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
    </head>
    <body>
-	<h2>Update post:</h2>
-	<form th:action="@{/updatePost}"
+    <h2>Update post:</h2>
+    <form th:action="@{/updatePost}"
          th:object="${blogPostForm}" method="POST">
-		 Date:
-		 <td th:utext="${post.postDate}">...</td>
-		 <br/>
+         Date:
+         <td th:utext="${post.postDate}">...</td>
+         <br/>
          Post text (maximum 960 signs):
-		 <br/>
-		<textarea th:field="*{postText}" maxlength="960" cols ="80" rows="12" autofocus required></textarea>
-		<br/>
+         <br/>
+        <textarea th:field="*{postText}" maxlength="960"
+                  cols ="80" rows="12" autofocus required></textarea>
+        <br/>
          <input type="submit" value="Update post"/>
       </form>
       <br/>
       <a href="index">Home</a>
 
    </body>
-    
 </html>
