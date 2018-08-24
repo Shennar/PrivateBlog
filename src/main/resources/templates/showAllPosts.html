@@ -20,9 +20,8 @@
                 <td th:utext="${post.postDate}">...</td>
                 <td th:utext="${post.postText}">...</td>
                 <td>
-                <form th:action = "@{/selectedPost}"
-                    th:object="${post}" method = "POST">
-                <!--    <input type="hidden" th:field="${id}" /> -->
+                    <form th:action ="@{/selectedPost(id=${post.id})}"
+                          method = "POST">
                 <button type="submit">Select</button>
                 </form>
                 </td>

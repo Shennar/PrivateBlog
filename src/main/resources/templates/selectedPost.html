@@ -12,16 +12,16 @@
       <h3>Post: </h3>
       <h3 th:utext="${post.postText}">...</h3>
       <br/>
-      <form th:action = "@{/deletePost}"
-	 	   th:object = "${post}" method = "POST">
-          <input type="hidden" th:field="${id}">
+      <form th:action ="@{/deletePost(id=${post.id})}"
+            method = "POST">
           <button type="submit">Delete</button>
       </form>
-      <form th:action = "@{/updatePost}"
-			   th:object = "${post}" method = "POST">
-			   <input type="hidden" th:field="${id}">
-			   <button type="submit">Update</button>
+      <br/>
+      <form th:action ="@{/updatePost(id=${post.id})}"
+            method = "POST">
+          <button type="submit">Update</button>
       </form>
+      <br/>
       <a href="index">Home</a>
    </body>
 </html>

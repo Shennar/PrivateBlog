@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b45ebda0-1e5f-45aa-9e94-9b394383ed74" name="Default" comment="Intermediate commit.&#10;Problems with sending post data from &quot;Show All Posts&quot; to &quot;SelectedPost&quot; form and to forms for update and delete.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/privateblog/form/BlogPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/privateblog/form/BlogPostForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selectedPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selectedPost.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showAllPosts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showAllPosts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/updatePost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/updatePost.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="PrivateBlogController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="213">
+              <caret line="84" column="51" lean-forward="true" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,8 +80,8 @@
       <file leaf-file-name="updatePost.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/updatePost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="242">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -517,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535046985878</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Last version.&#10;Only &quot;Update&quot; not working, all other options are OK.">
+      <created>1535103940813</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535103940813</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -534,7 +539,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1343" height="1039" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.3296582" />
@@ -582,7 +586,8 @@
     <MESSAGE value="Corrected mistakes in html-files.&#10;Basic authentification, ShowAllBlogs and ShowBlogsSortedByDate works." />
     <MESSAGE value="AddPost works.&#10;Problems with Select button in ShowAllPosts." />
     <MESSAGE value="Intermediate commit.&#10;Problems with sending post data from &quot;Show All Posts&quot; to &quot;SelectedPost&quot; form and to forms for update and delete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Intermediate commit.&#10;Problems with sending post data from &quot;Show All Posts&quot; to &quot;SelectedPost&quot; form and to forms for update and delete." />
+    <MESSAGE value="Last version.&#10;Only &quot;Update&quot; not working, all other options are OK." />
+    <option name="LAST_COMMIT_MESSAGE" value="Last version.&#10;Only &quot;Update&quot; not working, all other options are OK." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/privateblog/database/Database.java" />
@@ -724,16 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/showAllPosts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -755,10 +750,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="84" column="51" lean-forward="true" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/updatePost.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="242">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>

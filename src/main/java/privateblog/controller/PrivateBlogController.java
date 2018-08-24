@@ -58,44 +58,43 @@ public class PrivateBlogController{
         return "sortPostsByDate";
     }
     @RequestMapping(value={"/selectedPost"}, method = RequestMethod.GET)
-    public String showSelectedPost(Model model, @RequestParam Long id){
+    public String showSelectedPost(Model model, @RequestParam(name="id", required=false) Long id){
         BlogPost bp = blogPostDAO.findById(id).get();
         model.addAttribute("post",bp);
         return "selectedPost";
     }
     @RequestMapping(value={"/selectedPost"}, method = RequestMethod.POST)
-    public String getSelectedPost(Model model, @ModelAttribute("post") BlogPost post){
-        BlogPost bp = blogPostDAO.findById(post.getId()).get();
+    public String getSelectedPost(Model model, @RequestParam(name="id", required=false) Long id){
+                                  //@ModelAttribute("post") BlogPost post){
+        BlogPost bp = blogPostDAO.findById(id).get();
         BlogPostForm blogPostForm = new BlogPostForm();
-        blogPostForm.setId(bp.getId());
         blogPostForm.setPostDate(bp.getPostDate());
         blogPostForm.setPostText(bp.getPostText());
         model.addAttribute("post",bp);
         return "selectedPost";
     }
     @RequestMapping(value={"/deletePost"}, method = RequestMethod.POST)
-    public String deletePost(@ModelAttribute("post") BlogPost post){
-        blogPostDAO.deleteById(post.getId());
+    public String deletePost(@RequestParam(name="id", required=false) Long id){
+        blogPostDAO.deleteById(id);
         return "deletePost";
     }
     @RequestMapping(value={"/updatePost"}, method = RequestMethod.GET)
-    public String showPostToUpdate(Model model, @RequestParam Long id){
+    public String showPostToUpdate(Model model, @RequestParam(name="id", required=false) Long id){
         BlogPostForm blogPostForm = new BlogPostForm();
         BlogPost bp = blogPostDAO.findById(id).get();
         blogPostForm.setPostText(bp.getPostText());
         blogPostForm.setPostDate(bp.getPostDate());
-        blogPostForm.setId(id);
         model.addAttribute("blogPostForm", blogPostForm);
         return "updatePost";
     }
     @RequestMapping(value={"/updatePost"}, method = RequestMethod.POST)
     public String updatePost(Model model, @ModelAttribute("blogPostForm")
-        BlogPostForm blogPostForm){
+        BlogPostForm blogPostForm, @RequestParam(name="id", required=false) Long id){
             String postText = blogPostForm.getPostText();
                 BlogPost bp = new BlogPost();
                 bp.setPostText(postText);
-                bp.setId(blogPostForm.getId());
-                bp.setPostDate(blogPostDAO.findById(blogPostForm.getId())
+                bp.setId(id);
+                bp.setPostDate(blogPostDAO.findById(id)
                         .get()
                         .getPostDate());
                 blogPostDAO.save(bp);
