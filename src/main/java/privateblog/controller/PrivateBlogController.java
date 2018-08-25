@@ -90,10 +90,8 @@ public class PrivateBlogController{
     }
     @RequestMapping(value={"/update"})
     public String updatePost(@RequestParam Long id, @RequestParam String postText){
-        //String postText = blogPostForm.getPostText();
-        //Long id = blogPostForm.getId();
         BlogPost bp = new BlogPost();
-        Long idNum = id;//Long.parseLong(id);
+        Long idNum = id;
         bp.setPostText(postText);
         bp.setId(idNum);
         bp.setPostDate(blogPostDAO.findById(idNum)

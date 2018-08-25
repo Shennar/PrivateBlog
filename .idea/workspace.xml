@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b45ebda0-1e5f-45aa-9e94-9b394383ed74" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/privateblog/controller/PrivateBlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/privateblog/form/BlogPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/privateblog/form/BlogPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/updatePost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/updatePost.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -541,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535104369571</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Final version.&#10;All options work.">
+      <created>1535232066123</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1535232066123</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -558,7 +559,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1287" height="1039" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.3296582" />
@@ -568,8 +568,8 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50194854" side_tool="true" weight="0.3296582" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32762837" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49805143" weight="0.3296582" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49883085" visible="true" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="2" sideWeight="0.49805143" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49883085" weight="0.3296582" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32855567" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -608,7 +608,8 @@
     <MESSAGE value="Intermediate commit.&#10;Problems with sending post data from &quot;Show All Posts&quot; to &quot;SelectedPost&quot; form and to forms for update and delete." />
     <MESSAGE value="Last version.&#10;Only &quot;Update&quot; not working, all other options are OK." />
     <MESSAGE value="Last version.&#10;Only &quot;Update post&quot; not working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Last version.&#10;Only &quot;Update post&quot; not working." />
+    <MESSAGE value="Final version.&#10;All options work." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final version.&#10;All options work." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/privateblog/database/Database.java" />
@@ -723,6 +724,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
