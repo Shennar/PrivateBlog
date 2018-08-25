@@ -7,18 +7,23 @@
    </head>
    <body>
     <h2>Update post:</h2>
-    <form th:action="@{/updatePost}"
-         th:object="${blogPostForm}" method="POST">
-         Date:
-         <td th:utext="${post.postDate}">...</td>
-         <br/>
+    Date:
+    <p th:utext="${blogPostForm.postDate}">...</p>
+    <br/>
+    <form th:action="@{/update}"
+         th:object="${blogPostForm}">
          Post text (maximum 960 signs):
          <br/>
-        <textarea th:field="*{postText}" maxlength="960"
-                  cols ="80" rows="12" autofocus required></textarea>
+        <textarea name="postText" th:field="*{postText}"
+                  maxlength="960" cols ="80" rows="12"
+                  autofocus required
+        value="${postText}"></textarea>
         <br/>
-         <input type="submit" value="Update post"/>
+        <input type="hidden" datatype="number" name="id" th:value="${blogPostForm.id}"/>
+        <br/>
+        <button type="submit">Update</button>
       </form>
+
       <br/>
       <a href="index">Home</a>
 

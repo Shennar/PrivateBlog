@@ -78,26 +78,28 @@ public class PrivateBlogController{
         blogPostDAO.deleteById(id);
         return "deletePost";
     }
-    @RequestMapping(value={"/updatePost"}, method = RequestMethod.GET)
+    @RequestMapping(value={"/updatePost"})
     public String showPostToUpdate(Model model, @RequestParam(name="id", required=false) Long id){
         BlogPostForm blogPostForm = new BlogPostForm();
         BlogPost bp = blogPostDAO.findById(id).get();
         blogPostForm.setPostText(bp.getPostText());
         blogPostForm.setPostDate(bp.getPostDate());
+        blogPostForm.setId(id);
         model.addAttribute("blogPostForm", blogPostForm);
         return "updatePost";
     }
-    @RequestMapping(value={"/updatePost"}, method = RequestMethod.POST)
-    public String updatePost(Model model, @ModelAttribute("blogPostForm")
-        BlogPostForm blogPostForm, @RequestParam(name="id", required=false) Long id){
-            String postText = blogPostForm.getPostText();
-                BlogPost bp = new BlogPost();
-                bp.setPostText(postText);
-                bp.setId(id);
-                bp.setPostDate(blogPostDAO.findById(id)
-                        .get()
-                        .getPostDate());
-                blogPostDAO.save(bp);
-                return "redirect:/index";
+    @RequestMapping(value={"/update"})
+    public String updatePost(@RequestParam Long id, @RequestParam String postText){
+        //String postText = blogPostForm.getPostText();
+        //Long id = blogPostForm.getId();
+        BlogPost bp = new BlogPost();
+        Long idNum = id;//Long.parseLong(id);
+        bp.setPostText(postText);
+        bp.setId(idNum);
+        bp.setPostDate(blogPostDAO.findById(idNum)
+        .get()
+        .getPostDate());
+        blogPostDAO.save(bp);
+        return "redirect:/index";
     }
 }
